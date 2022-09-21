@@ -56,11 +56,11 @@ Appium Capabilities
 - iOS: `iOS`
 
 `deviceName` (`device` in Codecept)
-- Android: `adb.exe -s "<device id>" shell getprop ro.product.model`
+- Android: `adb -s "<device id>" shell getprop ro.product.model`
 - iOS: `instruments -s devices` | `xcrun xctrace list devices`
 
 `platformVersion`
-- Android: `adb.exe -s "emulator-5554" shell getprop ro.build.version.release`
+- Android: `adb -s "emulator-5554" shell getprop ro.build.version.release`
 - iOS: ``instruments -s devices`` | `xcrun xctrace list devices`
 
 Appium Server
