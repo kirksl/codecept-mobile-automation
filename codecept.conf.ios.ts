@@ -11,12 +11,12 @@ export const config: CodeceptJS.MainConfig = {
 	output: './output',
 	helpers: {
 		Appium: {
-			app: 'app-debug.app',
 			platform: 'ios',
-			smartWait: 5000,
-			device: '',
+			smartWait: 10000,
 			desiredCapabilities: {
-				automationName: 'XCUITest'
+				app: './apps/Automation.app',
+				automationName: 'XCUITest',
+				deviceName: 'iPhone 8'
 			}
 		}
 	},
@@ -28,9 +28,10 @@ export const config: CodeceptJS.MainConfig = {
 			enabled: false,
 			require: '@reportportal/agent-js-codecept',
 			token: '<access_token_here>',
-			endpoint: '<base_url_here>/api/v1',
-			launchName: '<launch_name_here>',
-			projectName: '<project_name_here>'
+			endpoint: 'http://localhost:8080/api/v2',
+			launchName: 'ios',
+			launchAttributes: [{key: 'build', value: '0'}],
+			projectName: 'demo'
 		}
 	},
 	name: 'codecept-mobile-automation'

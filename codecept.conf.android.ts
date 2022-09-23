@@ -11,9 +11,9 @@ export const config: CodeceptJS.MainConfig = {
 	output: './output',
 	helpers: {
 		Appium: {
-			app: 'app-debug.apk',
+			app: './apps/app-debug.apk',
 			platform: 'android',
-			smartWait: 5000,
+			smartWait: 10000,
 			device: 'Android SDK built for x86',
 			desiredCapabilities: {
 				platformVersion: '10.0'
@@ -28,9 +28,10 @@ export const config: CodeceptJS.MainConfig = {
 			enabled: false,
 			require: '@reportportal/agent-js-codecept',
 			token: '<access_token_here>',
-			endpoint: '<base_url_here>/api/v1',
-			launchName: '<launch_name_here>',
-			projectName: '<project_name_here>'
+			endpoint: 'http://localhost:8080/api/v2',
+			launchName: 'android',
+			launchAttributes: [{key: 'build', value: '0'}],
+			projectName: 'demo'
 		}
 	},
 	name: 'codecept-mobile-automation'

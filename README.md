@@ -1,8 +1,16 @@
 ## Purpose
-The purpose of this project is to demonstrate automation of Android and iOS platforms using Codecept.
+The purpose of this project is to demonstrate automation of Android and iOS platforms using CodeceptJS, WebdriverIO, ReportPortal.
 
 ## Setup
 Install [NodeJS](https://nodejs.org/)
+
+Install [Java](https://www.java.com/en/download/)
+
+Install Android Studio
+
+Install Android Studio > `SDK Manager` > `Build-Tools` > `Platform-Tools`
+
+Add Android Tools to PATH (See Appendix)
 
 Open terminal
 
@@ -45,6 +53,31 @@ Run the end-to-end iOS tests `npm run codecept:ios`
 ## Review
 
 ## Appendix
+Add Android Tools to PATH
+
+Note instructions assume Z shell on Mac/Linux and Cmd on Windows (adjust as appropriate)
+
+Note instructions assume default Android SDK paths (adjust as appropriate)
+
+Mac/Linux
+- Open terminal
+- Run `echo 'export ANDROID_HOME=$HOME/Library/Android/sdk' >> ~/.zshrc`
+- Run `echo 'export ANDROID_SDK=$HOME/Library/Android/sdk' >> ~/.zshrc`
+- Run `echo 'export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk' >> ~/.zshrc`
+- Run `echo 'export PATH=$PATH:$ANDROID_HOME/emulator' >> ~/.zshrc`
+- Run `echo 'export PATH=$PATH:$ANDROID_HOME/platform-tools' >> ~/.zshrc`
+- Run `source ~/.zshrc`
+
+Windows
+- Goto `This PC` > `System properties` > `Advanced system settings` > `Environment Variables`
+- Click `New` under `System variables`
+- Set `Variable name` to `ANDROID_HOME`, `Variable value` to `%LOCALAPPDATA%\Android\Sdk`
+- Click `OK`
+- Double click `Path` under `System variables`
+- Click `New` to add entry to Path `%ANDROID_HOME%\emulator`
+- Click `New` to add entry to Path `%ANDROID_HOME%\platform-tools`
+- Click `OK`
+
 Appium Capabilities
 
 `app`
