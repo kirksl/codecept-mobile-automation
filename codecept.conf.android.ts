@@ -32,6 +32,9 @@ export const config: CodeceptJS.MainConfig = {
 			launchName: 'android',
 			launchAttributes: [{key: 'build', value: '0'}],
 			projectName: 'demo'
+		},
+		retryFailedStep: {
+			enabled: true
 		}
 	},
 	name: 'codecept-mobile-automation'
