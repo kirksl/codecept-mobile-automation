@@ -3,6 +3,8 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
+        "codecept:android:saucelabs": "codeceptjs run --grep @android --steps --config codecept.conf.android.saucelabs.ts",
+        "codecept:android:browserstack": "codeceptjs run --grep @android --steps --config codecept.conf.android.browserstack.ts",
         "codecept:android": "codeceptjs run --grep @android --steps --config codecept.conf.android.ts",
         "codecept:ios": "codeceptjs run --grep @ios --steps --config codecept.conf.ios.ts",
         "codecept:headless": "HEADLESS=true codeceptjs run --steps",
