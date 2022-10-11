@@ -1,5 +1,5 @@
-import main from './main';
-import nav from './nav';
+import main from './android/main';
+import nav from './android/nav';
 
 export = {
 	main: new main(),

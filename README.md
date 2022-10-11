@@ -111,5 +111,6 @@ Appium Server
 - Remote: `See Device Grid Configuration`
 
 ## Notes
+https://codecept.io/best
 https://codecept.io/mobile
 https://appium.io/docs/en/writing-running-appium/caps/
