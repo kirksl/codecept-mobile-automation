@@ -1,4 +1,6 @@
 /// <reference types='codeceptjs' />
+
+// remove .ts from steps_file import or intellisense will break
 type steps_file = typeof import('./steps_file');
 type Page = typeof import('./pages/pages');
 type CustomHelper = import('./helpers/CustomHelper');

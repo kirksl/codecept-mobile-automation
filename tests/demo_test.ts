@@ -9,6 +9,7 @@ Scenario('Demo @android @C<testrail_id_here>', ({ I, Page }) => {
 	I.tap(Page.nav.slideshowButton);
 	I.see('This is slideshow fragment', Page.main.slideshowText);
 	I.doSomethingCustom();
+	I.doSomethingGlobal();
 });
 
 let values = new DataTable(['price', 'sales_tax', 'total']);
