@@ -4,7 +4,7 @@
 import Helper from '@codeceptjs/helper';
 
 class CustomHelper extends Helper {
-    doSomethingCustom() {
+    doSomethingCustom(): Promise<void> {
         // console.log("extend 'I' with actions that require low-level driver access");
         return;
     }
