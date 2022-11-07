@@ -1,8 +1,8 @@
 const { I } = inject();
 
 class main {
-	totalPriceLabel = '~lbl_total_price';
-	priceInput = '~inp_price';
+    totalPriceLabel = '~lbl_total_price';
+    priceInput = '~inp_price';
     salesTaxInput = '~inp_sales_tax';
     calculateButton = '~btn_calculate';
 
